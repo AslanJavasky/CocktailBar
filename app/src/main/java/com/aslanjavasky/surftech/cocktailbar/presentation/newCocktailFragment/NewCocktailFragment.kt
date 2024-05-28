@@ -21,12 +21,7 @@ class NewCocktailFragment : Fragment() {
     private var _binding: FragmentNewCocktailBinding? = null
     private val binding get() = _binding!!
 
-    @Inject
-    lateinit var VMFactory: NewCocktailViewModelFactory
-
-    private val viewModel: NewCocktailViewModel by viewModels{
-        VMFactory
-    }
+    private val viewModel: NewCocktailViewModel by viewModels()
 
     private val ingredientsListAdapter = IngredientsListAdapter()
 

@@ -17,12 +17,7 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class CocktailsListFragment : Fragment() {
 
-    @Inject
-    lateinit var VMFactory: CocktailsListViewModelFactory
-
-    private val viewModel: CocktailsListViewModel by viewModels{
-        VMFactory
-    }
+    private val viewModel: CocktailsListViewModel by viewModels()
 
     private var _binding: FragmentCocktailsListBinding? = null
     private val binding get() = _binding!!
